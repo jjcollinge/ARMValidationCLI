@@ -20,13 +20,13 @@ steps:
 - script: npm install
   displayName: 'npm install'
 
-
 - script: npm run build
   displayName: 'npm run build'
 
 - script: npm test
   displayName: 'npm test'
 
+  # Bundle deps to improve install performance
 - script: |
     npm install -g bundle-deps
     bundle-deps .
